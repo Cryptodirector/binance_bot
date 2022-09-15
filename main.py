@@ -100,7 +100,7 @@ class BinanceBot:
                 cl = float(i[4])  # цена закрытия
                 spoof = float(200000) / cl
                 if cl > coin:
-                    print(f'[+] Цена Открытия:', coin, 'Цена закрытия:', cl, self.input_coin)
+                    print(f'[+] Цена Открытия:, {coin}, Цена закрытия: {cl}, {self.input_coin}')
                     count_asks = 0
                     current_datetime = datetime.now()
                     time_second = current_datetime.second
@@ -117,11 +117,11 @@ class BinanceBot:
                         self.stop_loss()
                         self.take_profit()
                         self.TeleBot().message('847449845', 'Зашла в сделку: Монета - GMTUSDT')
-                        print(f'[+]', 'Второе условие выполнилось')
+                        print('[+]', 'Второе условие выполнилось')
                         time.sleep(300)
 
                     else:
-                        print(f'[-]', 'Второе условие не выполнилось')
+                        print('[-]', 'Второе условие не выполнилось')
 
 
 def main():
